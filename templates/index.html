@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna & Victor | #AVTieTheKnot26</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- FIXED NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="#home" style="color: inherit; text-decoration: none;">
+                <svg viewBox="0 0 100 100" class="av-logo">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                    <text x="48" y="65" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="52" font-weight="600" font-style="italic" fill="currentColor" letter-spacing="-4">A</text>
+                    <text x="54" y="65" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="52" font-weight="600" font-style="italic" fill="currentColor" letter-spacing="-4" opacity="0.9">V</text>
+                    <text x="50" y="74" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="28" font-weight="600" font-style="italic" fill="var(--gold)">&amp;</text>
+                </svg>
+            </a>
+        </div>
+        
+        <div class="nav-links">
+            <a href="#story">OUR STORY</a>
+            <a href="#gallery">GALLERY</a>
+            <a href="#crew">THE CREW</a>
+            <a href="#the-day">THE DAY</a>
+            <a href="#registry">REGISTRY</a>
+            <a href="#wishes">WISHES</a>
+        </div>
+
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- MOVING IMAGE HERO SECTION -->
+    <header id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="image-column col-left">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 1">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 2">
+                <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 3">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 1">
+            </div>
+            <div class="image-column col-center">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 4">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 5">
+                <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 6">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 4">
+            </div>
+            <div class="image-column col-right">
+                <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 7">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 8">
+                <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 9">
+                <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=800&auto=format&fit=crop" alt="Wedding moment 7">
+            </div>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+            <p class="tagline">WE'RE GETTING MARRIED</p>
+            <h1>Anna <span class="ampersand">&</span> Victor</h1>
+            <p class="slogan">#AVTieTheKnot26</p>
+            <div class="hero-details">
+                <p>28 . 12 . 2026 &nbsp; • &nbsp; KOGI STATE</p>
+            </div>
+        </div>
+
+        <div class="countdown-bar">
+            <div id="countdown" class="countdown">
+                <div class="count-box"><span id="days">00</span><p>DAYS</p></div>
+                <div class="count-box"><span id="hours">00</span><p>HOURS</p></div>
+                <div class="count-box"><span id="minutes">00</span><p>MINUTES</p></div>
+                <div class="count-box"><span id="seconds">00</span><p>SECONDS</p></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- OUR STORY (TABS) -->
+    <section id="story" class="section">
+        <div class="container">
+            <div class="story-header text-center" data-aos="fade-up">
+                <p class="section-label">OUR STORY</p>
+                <h2 class="story-title">Two sides, <br><em>one story</em></h2>
+                
+                <div class="story-toggle-wrapper">
+                    <button class="story-toggle-btn active" id="btn-her" onclick="switchStory('her')">HER SIDE • ANNA</button>
+                    <button class="story-toggle-btn" id="btn-his" onclick="switchStory('his')">HIS SIDE • VICTOR</button>
+                </div>
+            </div>
+
+            <div class="story-content-grid">
+                <div class="story-image-sticky" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=800&auto=format&fit=crop" alt="Anna and Victor" id="story-image">
+                    <div class="story-image-tag" id="story-image-tag">as told by Anna</div>
+                </div>
+
+                <div class="story-text-column">
+                    <!-- ANNA'S STORY -->
+                    <div id="story-her" class="story-panel active">
+                        <h3 class="story-panel-title">How I Met Your Father</h3>
+                        <p>I remember the first time I saw Victor. It was at a mutual friend's wedding in Port Harcourt. He was standing by the corner, laughing with a group of friends. He wasn't the loudest person in the room, but he had this quiet confidence that drew me in immediately.</p>
+                        <blockquote class="story-quote">"Sometimes, God writes the most beautiful stories in the most unexpected ways."</blockquote>
+                        <p>We started talking later that evening. I found myself completely captivated by his depth, his vision, and his kindness. We talked for hours about everything—from our childhood dreams to the kind of future we wanted to build. I remember going home that night and thinking, <em>“Wow, this person is so special.”</em></p>
+                        <p>Fast forward a few months, and we found ourselves planning what I thought was just a weekend getaway. He was acting so nervous, checking his pocket constantly. I didn't realize until we were walking along the beach at sunset that he had been carrying a ring around all day.</p>
+                        <p>When he got down on one knee, time literally stopped. The sound of the waves, the soft sand... it was perfect. <strong>And I said yes!</strong></p>
+                    </div>
+
+                    <!-- VICTOR'S STORY -->
+                    <div id="story-his" class="story-panel">
+                        <h3 class="story-panel-title">How I Met Your Mother</h3>
+                        <p>I wasn't really looking for love when I met Anna. I was focused on my career and just trying to navigate life. But the moment I saw her at that wedding, everything changed. She had this incredible smile that lit up the entire room.</p>
+                        <blockquote class="story-quote">"It wasn't just that I liked her. I knew I could build a life with her."</blockquote>
+                        <p>I remember building up the courage to walk over and say hello. We ended up talking for hours. What struck me most was her heart. She was intentional, thoughtful, and so incredibly present in our conversation. I knew right away that she was different.</p>
+                        <p>Planning the proposal was the hardest secret I've ever kept. I wanted it to be perfect. I spent weeks coordinating with her friends and family to make sure everything was aligned. When we went for that walk on the beach, my heart was pounding out of my chest.</p>
+                        <p>When she looked at me and said yes, it was the most overwhelming feeling of joy I have ever experienced. I am so incredibly grateful to God for bringing her into my life. <strong>I am ready for forever with her.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE JOURNEY TIMELINE -->
+    <section id="journey" class="section">
+        <div class="container">
+            <p class="section-label text-center" data-aos="fade-up">THE JOURNEY</p>
+            <h2 class="text-center" data-aos="fade-up" data-aos-delay="100">Our milestones</h2>
+            
+            <div class="horizontal-timeline-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-line"></div>
+                <div class="timeline-nodes">
+                    <div class="t-node">
+                        <div class="t-dot" style="background: var(--sky-blue);"></div>
+                        <p class="t-date">12 FEB 2025</p>
+                        <h4 class="t-title">"Is this seat taken?"</h4>
+                        <p class="t-desc">A random coffee shop in Abuja. One spilled latte led to a three-hour conversation.</p>
+                    </div>
+                    <div class="t-node">
+                        <div class="t-dot" style="background: var(--gold);"></div>
+                        <p class="t-date">04 MAY 2025</p>
+                        <h4 class="t-title">The First Road Trip</h4>
+                        <p class="t-desc">6 hours to Jos. Bad playlist, great company. We knew this was something special.</p>
+                    </div>
+                    <div class="t-node">
+                        <div class="t-dot" style="background: var(--sky-blue);"></div>
+                        <p class="t-date">20 DEC 2025</p>
+                        <h4 class="t-title">"I love you"</h4>
+                        <p class="t-desc">Said under the stars at the Christmas lights show. The easiest words ever spoken.</p>
+                    </div>
+                    <div class="t-node">
+                        <div class="t-dot" style="background: var(--gold);"></div>
+                        <p class="t-date">14 FEB 2026</p>
+                        <h4 class="t-title">The Surprise Proposal</h4>
+                        <p class="t-desc">A fancy dinner that turned into a room full of our closest friends. And a resounding YES.</p>
+                    </div>
+                    <div class="t-node">
+                        <div class="t-dot" style="background: var(--sky-blue);"></div>
+                        <p class="t-date">27 NOV 2026</p>
+                        <h4 class="t-title">Forever Begins</h4>
+                        <p class="t-desc">Kogi State. Two families become one. The best day of our lives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="section bg-dark">
+        <div class="container" style="margin-bottom: 2rem;">
+            <p class="section-label text-center" style="color: var(--gold);" data-aos="fade-up">GALLERY</p>
+            <h2 class="text-center gallery-title" data-aos="fade-up" data-aos-delay="100">Caught <em>in the Moment</em></h2>
+            <div class="gallery-drag-hint" data-aos="fade-up" data-aos-delay="200">
+                <span class="arrow-bounce">←</span> WATCH IT FLOW <span class="arrow-bounce">→</span>
+            </div>
+        </div>
+        
+        <div class="gallery-marquee-wrapper">
+            <div class="gallery-track">
+                <div class="gallery-set">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop" alt="Gallery 1">
+                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=800&auto=format&fit=crop" alt="Gallery 2">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop" alt="Gallery 3">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop" alt="Gallery 4">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800&auto=format&fit=crop" alt="Gallery 5">
+                </div>
+                <div class="gallery-set">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop" alt="Gallery 1">
+                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=800&auto=format&fit=crop" alt="Gallery 2">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop" alt="Gallery 3">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop" alt="Gallery 4">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800&auto=format&fit=crop" alt="Gallery 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE WEDDING CREW SECTION -->
+    <section id="crew" class="section">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <p class="section-label">THE WEDDING CREW</p>
+                <h2 class="crew-title">Our <em>Inner Circle</em></h2>
+                
+                <div class="crew-toggle-wrapper">
+                    <button class="crew-toggle-btn active" id="btn-bridesmaids" onclick="switchCrew('bridesmaids')">BRIDESMAIDS</button>
+                    <button class="crew-toggle-btn" id="btn-groomsmen" onclick="switchCrew('groomsmen')">GROOMSMEN</button>
+                </div>
+            </div>
+
+            <div id="crew-bridesmaids" class="crew-grid active">
+                <div class="crew-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="crew-img-wrapper"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=600&auto=format&fit=crop" alt="Bridesmaid 1"></div>
+                    <h3 class="crew-name">Joy Ohiota</h3>
+                    <p class="crew-role">MAID OF HONOUR</p>
+                </div>
+                <div class="crew-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="crew-img-wrapper"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600&auto=format&fit=crop" alt="Bridesmaid 2"></div>
+                    <h3 class="crew-name">Amarachi Iroegbu</h3>
+                    <p class="crew-role">BRIDESMAID</p>
+                </div>
+                <div class="crew-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="crew-img-wrapper"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=600&auto=format&fit=crop" alt="Bridesmaid 3"></div>
+                    <h3 class="crew-name">Anastasia Mbagwu</h3>
+                    <p class="crew-role">BRIDESMAID</p>
+                </div>
+                <div class="crew-member" data-aos="fade-up" data-aos-delay="400">
+                    <div class="crew-img-wrapper"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=600&auto=format&fit=crop" alt="Bridesmaid 4"></div>
+                    <h3 class="crew-name">Elizabeth Omale</h3>
+                    <p class="crew-role">BRIDESMAID</p>
+                </div>
+            </div>
+
+            <div id="crew-groomsmen" class="crew-grid">
+                <div class="crew-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="crew-img-wrapper"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop" alt="Groomsman 1"></div>
+                    <h3 class="crew-name">David Adeleke</h3>
+                    <p class="crew-role">BEST MAN</p>
+                </div>
+                <div class="crew-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="crew-img-wrapper"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop" alt="Groomsman 2"></div>
+                    <h3 class="crew-name">Samuel Okafor</h3>
+                    <p class="crew-role">GROOMSMAN</p>
+                </div>
+                <div class="crew-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="crew-img-wrapper"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" alt="Groomsman 3"></div>
+                    <h3 class="crew-name">Emmanuel Eze</h3>
+                    <p class="crew-role">GROOMSMAN</p>
+                </div>
+                <div class="crew-member" data-aos="fade-up" data-aos-delay="400">
+                    <div class="crew-img-wrapper"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop" alt="Groomsman 4"></div>
+                    <h3 class="crew-name">Michael Abuh</h3>
+                    <p class="crew-role">GROOMSMAN</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE DAY (UNIQUE SPLIT DESIGN) -->
+    <section id="the-day" class="section bg-sky">
+        <div class="container day-container">
+            <div class="day-date-side" data-aos="fade-right">
+                <p class="section-label">THE DAY</p>
+                <h2 class="giant-date">
+                    <span class="date-top">28.12</span>
+                    <span class="date-bottom">2026</span>
+                </h2>
+            </div>
+
+            <div class="day-details-side" data-aos="fade-left">
+                <div class="event-card">
+                    <div class="event-row">
+                        <span class="event-label">DATE</span>
+                        <div class="event-value"><h3>Monday, 28<br>December 2026</h3></div>
+                    </div>
+                    <div class="event-row">
+                        <span class="event-label">TIME</span>
+                        <div class="event-value"><h3>9:00 AM</h3></div>
+                    </div>
+                    <div class="event-row">
+                        <span class="event-label">LOCATION</span>
+                        <div class="event-value">
+                            <h3>Kogi State,<br>Nigeria</h3>
+                            <p class="venue-text">United Evangelical Church<br>Agojeju Onicha-Igo</p>
+                            <p class="venue-text">Reception: Ameh George Compound</p>
+                        </div>
+                    </div>
+                    <div class="event-divider"></div>
+                    <div class="event-row">
+                        <span class="event-label">DRESS CODE</span>
+                        <div class="event-value">
+                            <p>Dress comfortably in the wedding colours.</p>
+                            <div class="color-palette">
+                                <div class="palette-item"><span class="color-circle sky"></span><span class="palette-name">SKY BLUE</span></div>
+                                <div class="palette-item"><span class="color-circle gold"></span><span class="palette-name">GOLD</span></div>
+                                <div class="palette-item"><span class="color-circle silver"></span><span class="palette-name">SILVER</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRY / WISHLIST -->
+    <section id="registry" class="section bg-dark">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <p class="section-label" style="color: var(--gold);">REGISTRY</p>
+            <h2 class="registry-title">Help us build <br><em>our home</em></h2>
+            <p class="registry-subtitle">Your presence is the gift, truly. If you'd like to bless us further, here are a few things we're saving towards.</p>
+
+            <!-- The Wishlist Grid -->
+            <div class="registry-grid">
+                <!-- Item 1 -->
+                <div class="registry-item">
+                    <div class="registry-icon"><i class="fa-solid fa-wind"></i></div>
+                    <h3>Inverter Split AC</h3>
+                    <p>Bruhm BAS-12ICQB</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <div class="registry-stats">
+                        <span><strong>₦0</strong> of ₦650,000</span>
+                        <span>0 gifts</span>
+                    </div>
+                    <button class="contribute-btn" onclick="openModal('Inverter Split AC', 650000, 0)">CONTRIBUTE</button>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="registry-item">
+                    <div class="registry-icon"><i class="fa-solid fa-tv"></i></div>
+                    <h3>55" Smart TV</h3>
+                    <p>Bruhm</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <div class="registry-stats">
+                        <span><strong>₦0</strong> of ₦600,000</span>
+                        <span>0 gifts</span>
+                    </div>
+                    <button class="contribute-btn" onclick="openModal('55\" Smart TV', 600000, 0)">CONTRIBUTE</button>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="registry-item">
+                    <div class="registry-icon"><i class="fa-solid fa-jug-detergent"></i></div>
+                    <h3>Front Loader Washer</h3>
+                    <p>Bruhm</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <div class="registry-stats">
+                        <span><strong>₦0</strong> of ₦750,000</span>
+                        <span>0 gifts</span>
+                    </div>
+                    <button class="contribute-btn" onclick="openModal('Front Loader Washer', 750000, 0)">CONTRIBUTE</button>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="registry-item">
+                    <div class="registry-icon"><i class="fa-solid fa-blender"></i></div>
+                    <h3>Food Processor</h3>
+                    <p>Fola Power</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <div class="registry-stats">
+                        <span><strong>₦0</strong> of ₦120,000</span>
+                        <span>0 gifts</span>
+                    </div>
+                    <button class="contribute-btn" onclick="openModal('Food Processor', 120000, 0)">CONTRIBUTE</button>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="registry-item">
+                    <div class="registry-icon"><i class="fa-solid fa-lemon"></i></div>
+                    <h3>Automatic Juicer</h3>
+                    <p>For fresh mornings</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <div class="registry-stats">
+                        <span><strong>₦0</strong> of ₦90,000</span>
+                        <span>0 gifts</span>
+                    </div>
+                    <button class="contribute-btn" onclick="openModal('Automatic Juicer', 90000, 0)">CONTRIBUTE</button>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="registry-item">
+                    <div class="registry-icon"><i class="fa-solid fa-fire-burner"></i></div>
+                    <h3>Air Fryer</h3>
+                    <p>Crispy, guilt-free</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <div class="registry-stats">
+                        <span><strong>₦0</strong> of ₦110,000</span>
+                        <span>0 gifts</span>
+                    </div>
+                    <button class="contribute-btn" onclick="openModal('Air Fryer', 110000, 0)">CONTRIBUTE</button>
+                </div>
+                
+                <!-- Item 7 -->
+                <div class="registry-item">
+                    <div class="registry-icon"><i class="fa-solid fa-stroopwafel"></i></div>
+                    <h3>Waffle Maker</h3>
+                    <p>Saturday breakfasts</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <div class="registry-stats">
+                        <span><strong>₦0</strong> of ₦45,000</span>
+                        <span>0 gifts</span>
+                    </div>
+                    <button class="contribute-btn" onclick="openModal('Waffle Maker', 45000, 0)">CONTRIBUTE</button>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="registry-item">
+                    <div class="registry-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h3>Dish Rack</h3>
+                    <p>The unsung hero</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <div class="registry-stats">
+                        <span><strong>₦0</strong> of ₦35,000</span>
+                        <span>0 gifts</span>
+                    </div>
+                    <button class="contribute-btn" onclick="openModal('Dish Rack', 35000, 0)">CONTRIBUTE</button>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="registry-item">
+                    <div class="registry-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                    <h3>Espresso Machine</h3>
+                    <p>For the late nights</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
+                    <div class="registry-stats">
+                        <span><strong>₦0</strong> of ₦200,000</span>
+                        <span>0 gifts</span>
+                    </div>
+                    <button class="contribute-btn" onclick="openModal('Espresso Machine', 200000, 0)">CONTRIBUTE</button>
+                </div>
+            </div>
+
+            <!-- Cash Gift / Bank Transfer Section -->
+            <div class="cash-gift-box">
+                <div class="cash-gift-text">
+                    <p class="section-label" style="color: var(--gold);">LOVE OFFERING</p>
+                    <h3>Bless us with <br>a Gift</h3>
+                    <p>Your love and prayers mean the world to us. If you wish to support our new life together, you can give securely by card or transfer directly to our account.</p>
+                    
+                    <!-- General Paystack Button -->
+                    <button class="btn-primary" onclick="openModal('General Cash Gift', 0, 0)" style="margin-top: 2rem; background: var(--gold); border-color: var(--gold); color: #0F172A;">
+                        Give by Card
+                    </button>
+                </div>
+                <div class="bank-details-container">
+                    <div class="bank-row">
+                        <span class="bank-label">ACCOUNT NAME</span>
+                        <p class="bank-value">Anna Omale & Victor Abuh</p>
+                    </div>
+                    <div class="bank-row">
+                        <span class="bank-label">ACCOUNT NUMBER</span>
+                        <div class="bank-value-wrapper">
+                            <p class="bank-value account-number" id="acc-num">0123456789</p>
+                            <button class="copy-btn" onclick="copyAccount()">COPY</button>
+                        </div>
+                    </div>
+                    <div class="bank-row">
+                        <span class="bank-label">BANK</span>
+                        <p class="bank-value">GT Bank</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WISHES / CONTACT FORM (SPLIT LAYOUT) -->
+    <section id="wishes" class="section bg-dark">
+        <div class="container wishes-container">
+            
+            <!-- Left Side: The Form -->
+            <div class="wishes-left" data-aos="fade-right">
+                <p class="section-label" style="color: var(--gold);">WISHES</p>
+                <h2 class="wishes-title">Your Words, <br><em>Our Treasure</em></h2>
+                <p class="wishes-subtitle">Can't be there? Will be there? Either way, we'd love a word, a prayer, or a little marriage advice. Share the day with <strong>#AVTieTheKnot26</strong>.</p>
+                
+                <form id="wish-form" class="wish-form">
+                    <div class="form-group">
+                        <label for="name">YOUR NAME</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">YOUR WISH</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="border-radius: 30px; padding: 15px 40px; background: white; color: #0F172A; border: none; font-weight: 600;">Send Your Wish</button>
+                    <p id="form-status" style="color: var(--gold); margin-top: 15px; font-weight: 500;"></p>
+                </form>
+            </div>
+
+            <!-- Right Side: The Wall of Wishes -->
+            <div class="wishes-right" data-aos="fade-left">
+                <div id="wishes-display" class="wishes-scroll-area">
+                    <!-- Jinja Loop: Loads existing wishes from Python backend -->
+                    {% for wish in wishes %}
+                    <div class="wish-bubble">
+                        <p class="wish-text">"{{ wish.message }}"</p>
+                        <p class="wish-name">— {{ wish.name }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MEGA FOOTER -->
+    <footer class="mega-footer">
+        <div class="footer-logo" data-aos="zoom-in">
+            <svg viewBox="0 0 100 100" class="av-logo-footer">
+                <circle cx="50" cy="50" r="46" fill="none" stroke="var(--gold)" stroke-width="2"/>
+                <text x="48" y="65" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="52" font-weight="600" font-style="italic" fill="white" letter-spacing="-4">A</text>
+                <text x="54" y="65" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="52" font-weight="600" font-style="italic" fill="white" letter-spacing="-4" opacity="0.9">V</text>
+                <text x="50" y="74" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="28" font-weight="600" font-style="italic" fill="var(--gold)">&amp;</text>
+            </svg>
+        </div>
+
+        <h2 class="footer-names" data-aos="fade-up">
+            Anna <br>
+            <em>&</em> <br>
+            Victor
+        </h2>
+
+        <p class="footer-hashtag" data-aos="fade-up" data-aos-delay="100">#AVTieTheKnot26</p>
+
+        <div class="footer-nav" data-aos="fade-up" data-aos-delay="200">
+            <a href="#story">OUR STORY</a>
+            <a href="#gallery">GALLERY</a>
+            <a href="#crew">THE CREW</a>
+            <a href="#the-day">THE DAY</a>
+            <a href="#registry">REGISTRY</a>
+            <a href="#wishes">WISHES</a>
+        </div>
+
+        <div class="footer-credit" data-aos="fade-up" data-aos-delay="300">
+            <p>Anna Omale & Victor Abuh &nbsp;&middot;&nbsp; 28.12.2026</p>
+            <p style="margin-top: 10px; opacity: 0.5; font-size: 0.7rem;">Made with love.</p>
+            <p style="margin-top: 15px; font-size: 0.75rem; color: #94A3B8;">RSVP: Abuh Ruth (09023000840) | Itodo Faith (09067618086) | Elstan (+2347057935660)</p>
+        </div>
+    </footer>
+
+    <!-- CONTRIBUTE MODAL -->
+    <div id="contribute-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            
+            <p class="section-label" style="color: var(--gold);">CONTRIBUTE</p>
+            <h2 id="modal-item-title" class="modal-title">Item Name</h2>
+            <p id="modal-item-remaining" class="modal-remaining">₦0 to go</p>
+            
+            <div class="quick-amounts">
+                <button class="quick-btn" onclick="setAmount(5000, this)">₦5,000</button>
+                <button class="quick-btn" onclick="setAmount(10000, this)">₦10,000</button>
+                <button class="quick-btn" onclick="setAmount(20000, this)">₦20,000</button>
+                <button class="quick-btn" onclick="setAmount(50000, this)">₦50,000</button>
+                <button class="quick-btn" onclick="setAmount(100000, this)">₦100,000</button>
+            </div>
+
+            <div class="modal-form-group">
+                <label>AMOUNT (₦)</label>
+                <input type="number" id="pay-amount" required>
+            </div>
+            
+            <div class="modal-form-group">
+                <label>YOUR NAME</label>
+                <input type="text" id="pay-name" required>
+            </div>
+
+            <div class="modal-form-group">
+                <label>EMAIL (FOR YOUR RECEIPT)</label>
+                <input type="email" id="pay-email" required>
+            </div>
+
+            <div class="modal-form-group">
+                <label>A NOTE FOR THE COUPLE (OPTIONAL)</label>
+                <textarea id="pay-note" rows="3"></textarea>
+            </div>
+
+            <button class="pay-submit-btn" id="pay-submit-btn" onclick="processPayment()">
+                GIVE ₦0
+            </button>
+            
+            <p class="modal-footer-text">
+                Payments are processed securely by Paystack. You'll come straight back here afterwards.
+            </p>
+        </div>
+    </div>
+
+    <!-- Paystack Inline JS -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, offset: 100 });
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
