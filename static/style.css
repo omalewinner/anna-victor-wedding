@@ -790,3 +790,100 @@ h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
     .crew-grid { grid-template-columns: 1fr; }
     .crew-img-wrapper { border-radius: 150px 150px 0 0; max-width: 300px; margin: 0 auto 1.5rem auto; }
 }
+/* =========================================
+   MOBILE HAMBURGER & MENU
+   ========================================= */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* The Hamburger Icon */
+.hamburger {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+/* The Full-Screen Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 100%; /* Hidden off-screen by default */
+    width: 100%;
+    height: 100vh;
+    background: rgba(11, 17, 32, 0.98); /* Deep navy */
+    backdrop-filter: blur(15px);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mobile-menu.active {
+    left: 0; /* Slide in */
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.close-menu {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 2rem;
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-style: italic;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-links a:hover {
+    color: var(--gold);
+}
+
+/* Show hamburger and hide desktop links on mobile */
+@media (max-width: 768px) {
+    .nav-links { 
+        display: none; 
+    }
+    .hamburger { 
+        display: flex; 
+    }
+}

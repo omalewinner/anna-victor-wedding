@@ -140,6 +140,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 formStatus.innerText = "Something went wrong. Please try again.";
             }
         });
+            // --- 0. MOBILE MENU TOGGLE ---
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuBtn = document.getElementById('close-menu');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close menu when a link is clicked
+        window.closeMobileMenu = function() {
+            mobileMenu.classList.remove('active');
+        };
+    }
     }
 
 
